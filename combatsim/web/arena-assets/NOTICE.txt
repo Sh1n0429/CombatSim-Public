@@ -1,0 +1,50 @@
+F-16 Fighter Jet visual asset
+=============================
+Author: iedalton — https://sketchfab.com/iedalton
+Original: https://sketchfab.com/3d-models/f-16-fighter-jet-d84491f443384ee488593cc6f0f0839e
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Full license: CC-BY-4.0.txt
+Downloaded 2026-11-12 from https://motionmistry.pk/3d-models/
+The original GLB and its embedded author, source and license metadata are retained.
+Runtime changes normalize orientation/size and adjust paint and canopy materials.
+The overview enlarges aircraft for spectators; these visual changes do not alter
+simulated flight performance. No endorsement is implied.
+
+CombatSim ARENA original score and effects
+=========================================
+arena-score.ogg is an original E-minor aviation arena-rock cue (124 BPM,
+32 bars, approximately 62 seconds). The arrangement uses double-tracked
+power-chord guitars, sustained lead guitar, picked bass, analog-style pads,
+and power drums with a short gated snare room. Composition and arrangement
+were created for CombatSim, with an original melody.
+
+The music was rendered offline with FluidSynth 2.4.8 and GeneralUser GS 2.0.3
+by S. Christian Collins. GeneralUser GS permits private and commercial music
+recordings. Source and music-production terms:
+https://www.schristiancollins.com/generaluser
+https://github.com/mrbumpy409/GeneralUser-GS/blob/main/documentation/LICENSE.txt
+Only the finished music recording is bundled; the SoundFont and rendering tools
+are not included or needed at runtime.
+
+arena-engine.ogg, arena-launch.ogg and arena-impact.ogg were synthesized for
+this project. Created for use and redistribution with CombatSim.
+
+Three.js 0.187.0 and official addons
+==================================
+Copyright 2010-2026 Three.js Authors. MIT license; see LICENSE.
+Source: https://github.com/mrdoob/three.js/tree/r187
+Retrieved from the three@0.187.0 npm package. three.module.js and
+three.core.js are minified with esbuild 0.28.2; other files are unmodified.
+To reproduce the two minified files:
+  npm install --prefix /tmp/arena-vendor three@0.187.0 esbuild@0.28.2
+  /tmp/arena-vendor/node_modules/.bin/esbuild /tmp/arena-vendor/node_modules/three/build/three.module.js --minify --outfile=three.module.js
+  /tmp/arena-vendor/node_modules/.bin/esbuild /tmp/arena-vendor/node_modules/three/build/three.core.js --minify --outfile=three.core.js
+The meshopt decoder addon carries its own MIT notice in its source header.
+All application assets are served locally; no CDN is contacted at runtime.
+
+Meshoptimizer decoder 1.1 (included by Three.js)
+===============================================
+Copyright (c) 2016-2026 Arseny Kapoulkine.
+Source: https://github.com/zeux/meshoptimizer
+MIT license; the full permission and warranty terms are the same as LICENSE.

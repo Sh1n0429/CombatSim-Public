@@ -1,0 +1,56 @@
+# One-update installation test. It is intentionally separate from the real
+# experiment so models never need to edit the official training settings.
+scenario: ../configs/scenario-default.json
+
+training:
+  algorithm: ppo
+  max_seq_len: 16
+  iterations: 1
+  batch_size: 64
+  minibatch_size: 32
+  compact_attention: true
+  lr: 2.0e-05
+  gamma: 0.997
+  gae_lambda: 0.99
+  clip_param: 0.2
+  entropy_coeff: 0.001
+  vf_loss_coeff: 1.0
+  vf_clip_param: 10.0
+  grad_clip: 1.0
+  kl_coeff: 0.2
+  kl_target: 0.01
+  num_epochs: 1
+  seed: 123
+  resume: null
+  checkpoint_interval: 0
+
+opponents:
+  rating_k: 24.0
+  rule_ratio: 0.0
+  random_rate: 0.5
+  snapshot_ratio: 0.0
+  snapshot_pool_size: 1
+  snapshot_interval_matches: 100
+
+workers:
+  num_env_runners: 1
+  num_envs_per_runner: 1
+  cpus_per_env_runner: 1.0
+  ray_address: null
+  ray_temp_dir: ../artifacts/smoke-test/ray
+
+output:
+  checkpoint_dir: ../artifacts/smoke-test/checkpoint
+  rating_log: ../artifacts/smoke-test/matches.jsonl
+  metrics_log: ../artifacts/smoke-test/training.jsonl
+  tensorboard_dir: ../artifacts/smoke-test/tensorboard
+  profile: null
+
+evaluation:
+  enabled: false
+  interval: 1
+  seeds: [2001]
+  action_mode: sample
+  log: ../artifacts/smoke-test/evaluation.jsonl
+  policy_ids: [main]
+  num_workers: 1

@@ -1,0 +1,10 @@
+{
+  "rewards": [
+    {
+      "type": "hooks",
+      "profile": "custom",
+      "max_step_total": 10.0,
+      "max_episode_total": 20.0
+    }
+  ]
+}

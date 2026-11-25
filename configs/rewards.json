@@ -1,0 +1,32 @@
+{
+  "rewards": [
+    {
+      "type": "victory",
+      "win": 1.0,
+      "loss": -1.0,
+      "draw": -0.1
+    },
+    {
+      "type": "shootdown",
+      "kill": 0.3,
+      "loss": -0.3
+    },
+    {
+      "type": "time_penalty",
+      "max_total": 0.2,
+      "mode": "episode_budget"
+    },
+    {
+      "type": "boundary_override",
+      "penalty": -0.003,
+      "max_total": null
+    },
+    {
+      "type": "out_of_bounds",
+      "penalty": -0.003,
+      "max_total": null,
+      "mode": "per_step",
+      "include_altitude": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "environment_config": "scenario.json",
+  "rule_policy_profiles": {
+    "fix": {},
+    "random": {
+      "nonclosing_fire_range": 0.0,
+      "randomize": {
+        "enabled": true,
+        "attack_altitude": [
+          0.7,
+          0.74
+        ],
+        "evade_altitude": [
+          0.43,
+          0.47
+        ],
+        "evade_turn_scale": [
+          0.15,
+          0.35
+        ],
+        "crank_angle_degrees": [
+          12.0,
+          24.0
+        ],
+        "egress_ticks": [
+          4,
+          8
+        ],
+        "fire_range": [
+          200.0,
+          280.0
+        ],
+        "fire_interval_ticks": [
+          30,
+          60
+        ]
+      }
+    }
+  }
+}

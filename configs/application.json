@@ -1,0 +1,46 @@
+{
+  "training": {
+    "eval_stop_consecutive": 2,
+    "eval_confirm_seeds": null,
+    "resume_override_opponents": false,
+    "max_seq_len": 16,
+    "head_hidden_sizes": [
+      128
+    ],
+    "win_rate_window": 100
+  },
+  "live": {
+    "port": 8765,
+    "pace": 10,
+    "seed_start": 2001,
+    "seed_count": 5,
+    "aircraft_per_team": 2,
+    "blue_count": 2,
+    "red_count": 2,
+    "action_mode": "sample"
+  },
+  "tournament": {
+    "seed_start": 2001,
+    "num_seeds": 50,
+    "action_mode": "sample"
+  },
+  "replay": {
+    "seed": 2001,
+    "action_mode": "sample",
+    "rule_profile": "fix",
+    "learned_side": "blue"
+  },
+  "boundary": {
+    "enabled": false,
+    "horizontal_margin": 40.0,
+    "vertical_margin": 4.0,
+    "release_ratio": 1.3
+  },
+  "rating": {
+    "reference": 1000.0,
+    "k": 24.0
+  },
+  "environment_adapter": {
+    "random_rate": 0.0
+  }
+}

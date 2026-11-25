@@ -1,0 +1,10 @@
+{
+  "team_alpha": {
+    "models": ["model-01", "model-02", "model-03"],
+    "lineup": ["model-01", "model-02", "model-03", "model-01", "model-02"]
+  },
+  "team_bravo": {
+    "models": ["model-04", "model-05", "model-06"],
+    "lineup": ["model-04", "model-05", "model-06", "model-04", "model-05"]
+  }
+}

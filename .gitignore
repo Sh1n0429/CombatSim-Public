@@ -1,0 +1,14 @@
+.venv/
+*.egg-info/
+.uv-cache/
+.uv-python/
+.uv-python-bin/
+artifacts/*
+!artifacts/.gitkeep
+models/*
+!models/.gitkeep
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ray/
+distribution-manifest.json

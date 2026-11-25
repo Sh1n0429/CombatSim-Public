@@ -1,0 +1,159 @@
+{
+  "environment_config": "aerodynamic.json",
+  "reward_config": "rewards.json",
+  "max_steps": 1200,
+  "decision_interval_steps": 3,
+  "paired_spawn": true,
+  "boundary_override": {
+    "enabled": true,
+    "horizontal_margin": 40.0,
+    "vertical_margin": 4.0,
+    "release_ratio": 1.3
+  },
+  "rule_policy": {
+    "upper_recovery_altitude": 0.9,
+    "randomize": {
+      "enabled": false,
+      "attack_altitude": [
+        0.72,
+        0.8
+      ],
+      "attack_altitude_spread": [
+        0.02,
+        0.05
+      ],
+      "evade_altitude": [
+        0.32,
+        0.48
+      ],
+      "evade_altitude_spread": [
+        0.0,
+        0.05
+      ],
+      "crank_angle_degrees": [
+        20.0,
+        40.0
+      ],
+      "support_vertical_limit_degrees": [
+        22.0,
+        35.0
+      ],
+      "egress_ticks": [
+        4,
+        10
+      ],
+      "fire_range": [
+        108.0,
+        132.0
+      ],
+      "nonclosing_fire_range": [
+        72.0,
+        88.0
+      ],
+      "separate_range": [
+        28.0,
+        36.0
+      ],
+      "reengage_range": [
+        56.0,
+        72.0
+      ],
+      "emergency_evade_range": [
+        72.0,
+        88.0
+      ],
+      "evade_hold_range": [
+        88.0,
+        104.0
+      ]
+    },
+    "fire_range": 265.0,
+    "nonclosing_fire_range": 0.0,
+    "nonclosing_fire_ratio": 0.7,
+    "separate_range": 20.0,
+    "reengage_range": 36.0,
+    "emergency_evade_range": 85.0,
+    "evade_hold_range": 105.0,
+    "egress_ticks": 6,
+    "egress_max_ticks": 50,
+    "egress_range": 50.0,
+    "egress_heading_tolerance_degrees": 45.0,
+    "boundary_enter_range": 40.0,
+    "boundary_exit_range": 64.0,
+    "waypoint_radius": 18.0,
+    "attack_altitude": 0.72,
+    "attack_altitude_spread": 0.02,
+    "evade_altitude": 0.45,
+    "evade_altitude_spread": 0.02,
+    "crank_angle_degrees": 24.0,
+    "support_vertical_limit_degrees": 24.0,
+    "evade_turn_scale": 0.35,
+    "evade_vertical_degrees": 5.0,
+    "fire_interval_ticks": 35,
+    "max_simultaneous_own_missiles": 1
+  },
+  "performance_randomization": {
+    "enabled": false,
+    "mode": "mirrored_by_slot",
+    "randomize": {
+      "ammunition": [
+        3,
+        5
+      ],
+      "radar_range": [
+        252.0,
+        308.0
+      ],
+      "radar_fov": [
+        2.2,
+        2.6
+      ],
+      "aircraft_speed": [
+        0.97,
+        1.03
+      ],
+      "shoot_cooldown": [
+        8,
+        12
+      ],
+      "missile_lifetime": [
+        58,
+        72
+      ]
+    }
+  },
+  "aircraft": [
+    {
+      "id": "blue_wing0",
+      "team": "blue"
+    },
+    {
+      "id": "blue_wing1",
+      "team": "blue"
+    },
+    {
+      "id": "blue_wing2",
+      "team": "blue"
+    },
+    {
+      "id": "blue_wing3",
+      "team": "blue"
+    },
+    {
+      "id": "red_wing0",
+      "team": "red"
+    },
+    {
+      "id": "red_wing1",
+      "team": "red"
+    },
+    {
+      "id": "red_wing2",
+      "team": "red"
+    },
+    {
+      "id": "red_wing3",
+      "team": "red"
+    }
+  ]
+}

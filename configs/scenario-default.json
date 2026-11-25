@@ -1,0 +1,31 @@
+{
+  "environment_config": "scenario-rule-curriculum.json",
+  "reward_config": "reward-hooks.json",
+  "max_in_flight_missiles": 2,
+  "paired_spawn": false,
+  "spawn_min_horizontal_distance": 100.0,
+  "aircraft": [
+    {
+      "id": "blue_wing0",
+      "team": "blue"
+    },
+    {
+      "id": "blue_wing1",
+      "team": "blue"
+    },
+    {
+      "id": "red_wing0",
+      "team": "red"
+    },
+    {
+      "id": "red_wing1",
+      "team": "red"
+    }
+  ],
+  "boundary_override": {
+    "enabled": true,
+    "horizontal_margin": 40.0,
+    "vertical_margin": 4.0,
+    "release_ratio": 1.3
+  }
+}

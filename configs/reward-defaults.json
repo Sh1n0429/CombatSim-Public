@@ -1,0 +1,65 @@
+{
+  "VictoryReward": {
+    "win": 1.0,
+    "loss": -1.0,
+    "draw": 0.0
+  },
+  "OutOfBoundsPenalty": {
+    "penalty": -0.01,
+    "mode": "per_step",
+    "include_altitude": true,
+    "max_total": null
+  },
+  "ShootdownReward": {
+    "kill": 0.2,
+    "loss": -0.2
+  },
+  "CrashPenalty": {
+    "penalty": -1.0
+  },
+  "MissileMissPenalty": {
+    "penalty": -0.02
+  },
+  "MissileEvasionReward": {
+    "reward": 0.02,
+    "require_bite": true
+  },
+  "SurvivalReward": {
+    "reward": 0.05
+  },
+  "BiteReward": {
+    "reward": 0.02
+  },
+  "MissileTrackLossPenalty": {
+    "penalty": -0.02
+  },
+  "RadarDetectionReward": {
+    "reward": 0.0001,
+    "max_total": 0.08
+  },
+  "TimePenalty": {
+    "penalty": -5e-05,
+    "max_total": 0.06,
+    "mode": "per_step"
+  },
+  "ExcessiveManeuverPenalty": {
+    "penalty": -0.001,
+    "free_rate_degrees": 10.0,
+    "max_total": 0.1
+  },
+  "ForwardProgressReward": {
+    "scale": 0.05
+  },
+  "MechanicalEnergyReward": {
+    "scale": 0.05,
+    "energy_scale": 100000.0
+  },
+  "HookReward": {
+    "max_step_total": 10.0,
+    "max_episode_total": 20.0
+  },
+  "BoundaryOverridePenalty": {
+    "penalty": -0.003,
+    "max_total": 0.3
+  }
+}

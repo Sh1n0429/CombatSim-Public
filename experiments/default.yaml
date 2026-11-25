@@ -1,0 +1,53 @@
+scenario: ../configs/scenario-default.json
+training:
+  algorithm: mappo
+  max_seq_len: 32
+  iterations: 5000
+  batch_size: 8192
+  minibatch_size: 1024
+  compact_attention: true
+  lr: 1.0e-04
+  gamma: 0.997
+  gae_lambda: 0.99
+  clip_param: 0.2
+  entropy_coeff: 0.001
+  vf_loss_coeff: 1.0
+  vf_clip_param: 10.0
+  grad_clip: 1.0
+  kl_coeff: 0.2
+  kl_target: 0.01
+  num_epochs: 2
+  seed: 123
+  resume: null
+  resume_override_opponents: true  # Apply these opponent ratios when resuming too.
+  checkpoint_interval: 50
+opponents:
+  rating_k: 24.0
+  rule_ratio: 0.25
+  random_rate: 0.5  # Fraction within rule matches; the rest use fixed fix.
+  snapshot_ratio: 0.25
+  snapshot_pool_size: 10
+  snapshot_interval_matches: 500
+workers:
+  learner_threads: 16
+  num_env_runners: 10
+  num_envs_per_runner: 2
+  cpus_per_env_runner: 1.0
+  ray_address: null
+  ray_temp_dir: ../artifacts/ray
+output:
+  checkpoint_dir: ../artifacts/checkpoint
+  rating_log: ../artifacts/matches.jsonl
+  metrics_log: ../artifacts/training.jsonl
+  tensorboard_dir: ../artifacts/tensorboard
+  profile: null
+evaluation:
+  enabled: true
+  interval: 50
+  seeds: [4001, 4002, 4003, 4004, 4005]
+  action_mode: sample
+  log: ../artifacts/evaluation.jsonl
+  policy_ids: [main]
+  num_workers: 1
+  rule_profile: both
+  stop_win_rate: null  # Evaluation records results only; run all requested iterations.

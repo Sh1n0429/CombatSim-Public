@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "combatsim-simulator"
+version = "1.0.0"
+license = {file = "LICENSE"}
+description = "Multi-agent air combat simulator with local live viewing and optional reinforcement learning"
+requires-python = "==3.12.*"
+dependencies = [
+  "PyYAML>=6.0",
+  "numpy>=1.24,<2.4",
+  "numba>=0.62",
+  "ray[rllib]>=2.40",
+  "gymnasium>=0.29",
+  "torch>=2.6",
+  "tensorboard>=2.18,<2.21",
+  # TensorBoard 2.x imports pkg_resources. Pin the last broadly compatible
+  # setuptools line instead of relying on it being installed indirectly.
+  "setuptools==80.9.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["combatsim*", "configs*"]
+
+[tool.setuptools.package-data]
+combatsim = ["web/*.html", "web/*.js", "web/arena-assets/*", "web/arena-assets/addons/*/*.js"]
+configs = ["*.json"]
+
+[tool.uv]
+required-version = ">=0.12"
